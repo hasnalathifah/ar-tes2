@@ -9,8 +9,20 @@
 </head>
 <body>
 <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+    <a-assets>
+        <a-asset-item
+            id="animated-asset"
+            src="assets/asset.gltf"
+        ></a-asset-item>
+    </a-assets>
     <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
-    <a-entity material='color: blue' geometry='primitive: box' gps-new-entity-place="latitude: -7.289233; longitude: 112.797007" scale="10 10 10"></a-entity>
+    <a-entity 
+        look-at="[gps-new-camera]"
+        animation-mixer="loop: repeat"
+        gltf-model="#animated-asset"
+        scale="0.6633601288757837 0.6633601288757837 0.6633601288757837" 
+        gps-new-entity-place="latitude: -7.289133; longitude: 112.797007">
+    </a-entity>
 </a-scene>
 </body>
 </html>
