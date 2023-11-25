@@ -13,6 +13,7 @@
         <a-asset-item
             id="animated-asset"
             src="assets/arrow.glb"
+            
         ></a-asset-item>
     </a-assets>
     <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
@@ -22,6 +23,13 @@
         gltf-model="#animated-asset"
         scale="0.6633601288757837 0.6633601288757837 0.6633601288757837" 
         gps-new-entity-place="latitude: -7.289123; longitude: 112.796941">
+    </a-entity>
+    <a-entity 
+        look-at="[gps-new-camera]"
+        animation-mixer="loop: repeat"
+        gltf-model="#animated-asset"
+        scale="0.6633601288757837 0.6633601288757837 0.6633601288757837" 
+        gps-new-entity-place="latitude: -7.289123; longitude: 112.796641">
     </a-entity>
 </a-scene>
 </body>
