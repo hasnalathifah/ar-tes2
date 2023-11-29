@@ -41,9 +41,12 @@ function renderPlaces() {
     let latitude = lat[i];
     let longitude = lon[i];
 
-    let model = document.createElement('a-box');
+    let model = document.createElement('a-entity');
     model.setAttribute('gps-new-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-    model.setAttribute('material', { color: 'blue' } );
+    // model.setAttribute('material', { color: 'blue' } );
+    model.setAttribute('look-at', '[gps-new-camera]')
+    model.setAttribute('gltf-model', '#animated-asset');
+    model.setAttribute('animation-mixer', 'loop: repeat');
     model.setAttribute('scale', '0.5 0.5 0.5');
 
     model.addEventListener('loaded', () => {
