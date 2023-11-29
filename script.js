@@ -38,7 +38,6 @@ function renderPlaces() {
         ]
 
    for (let i = 0; i < lat.length; i++) {
-    const element = array[i];
     let latitude = lat[i];
     let longitude = lon[i];
 
