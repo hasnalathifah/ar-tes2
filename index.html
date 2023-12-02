@@ -17,6 +17,17 @@
         ></a-asset-item>
     </a-assets>
     <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
+    <script>
+        AFRAME.registerComponent('look-at', {
+          schema: { type: 'selector' },
+        
+          init: function () {},
+        
+          tick: function () {
+            this.el.object3D.lookAt(this.data.object3D.position)
+          }
+        })
+    </script>
     <a-entity 
         look-at="latitude: -7.289123; longitude: 112.796901"
         id = "target"
