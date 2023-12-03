@@ -49,14 +49,14 @@ function renderPlaces() {
         model.setAttribute('gps-new-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
         // model.setAttribute('material', { color: 'blue' } );
         model.setAttribute('look-at', '[gps-new-camera]');
-        let id = 'target'+i;
-        let target = '#target'+(i-1);
-        model.setAttribute('id', id);
-        if (i != 0) {
-            model.setAttribute('look-at', target);
-            console.log(id);
-            console.log(target);
-        } 
+        // let id = 'target'+i;
+        // let target = '#target'+(i-1);
+        // model.setAttribute('id', id);
+        // if (i != 0) {
+        //     model.setAttribute('look-at', target);
+        //     console.log(id);
+        //     console.log(target);
+        // } 
         model.setAttribute('gltf-model', '#animated-asset');
         model.setAttribute('animation-mixer', 'loop: repeat');
         model.setAttribute('scale', '0.6633601288757837 0.6633601288757837 0.6633601288757837');
